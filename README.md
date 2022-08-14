@@ -5,8 +5,8 @@ A small and simple app like Hulu and IMDB using navigation, redux, redux persist
 ## Install and run on android
 
 ```
-npm install -g react-native-cli
 cd Movies
+npm install -g react-native-cli
 npm install
 react-native run-android
 ```
