@@ -14,7 +14,7 @@ const HomeNavigator = () => {
   );
   const detailsMovie = useSelector((state: RootState) => state.movieDetail);
   const hasMovieDetail = Object.keys(detailsMovie.item).length > 0;
-
+    
   return (
     <Tab.Navigator
       screenOptions={{

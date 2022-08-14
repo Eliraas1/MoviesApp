@@ -5,12 +5,12 @@ GoogleSignin.configure();
 const googleSignIn = async (setUser, setError, setIsLoading) => {
   try {
     setIsLoading(true);
-    await GoogleSignin.hasPlayServices({showPlayServicesUpdateDialog: true});
+    await GoogleSignin.hasPlayServices();
     const userInfo = await GoogleSignin.signIn();
-    console.log('asdasdasd', {userInfo});
-    setUser({userInfo});
+    setUser(userInfo.user);
   } catch (error) {
     setError({error});
+    console.log('asdasdasdasd');
   }
   setIsLoading(false);
 };

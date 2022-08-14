@@ -9,6 +9,10 @@ import DrawerNavigator from './Drawer';
 const Tab = createBottomTabNavigator();
 const Navigator: typeof Tab.Navigator = () => {
   const user = useSelector((state: RootState) => state.user);
+  console.log(user.user);
+  React.useEffect(() => {
+    console.log({user});
+  }, [user]);
   if (!user.user) return <AuthNavigator />;
   return <HomeNavigator />;
 };

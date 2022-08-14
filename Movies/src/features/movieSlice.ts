@@ -14,7 +14,6 @@ export const movieSlice = createSlice({
       state.isLoading = true;
     },
     getMovieSuccess: (state, action: any) => {
-      console.log(state.page);
       state.results = [...state.results, ...action.payload];
       state.page++;
       state.isLoading = false;

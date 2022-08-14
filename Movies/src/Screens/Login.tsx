@@ -3,7 +3,7 @@ import React from 'react';
 import Button from '../components/Button';
 import Welcome from '../components/Welcome';
 import {setHeight} from '../helpers/screenSize';
-import {googleSignIn} from '../services/googleServices';
+import {googleSignIn, googleSignOut} from '../services/googleServices';
 import {facebookSignIn} from '../services/facebookServices';
 import {useDispatch} from 'react-redux';
 import {setUser} from '../features/userSlice';
@@ -16,6 +16,8 @@ export default function Login() {
 
   const googleOnPress = () => {
     googleSignIn(setUserState, setError, setIsLoading);
+    // googleSignOut();
+    // console.log(userState);
     dispatch(setUser(userState));
   };
   const facebookOnPress = () => {

@@ -28,6 +28,7 @@ const userConfig = {
   key: 'userReducer',
   version: 1,
   storage: AsyncStorage,
+  whitelist: [],
 };
 const movieDetailsConfig = {
   key: 'movieDetailsSlice',
