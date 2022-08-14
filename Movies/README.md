@@ -14,7 +14,7 @@ react-native run-android
 ### Demo:
 
 login:
-<img src={uri:'https://media0.giphy.com/media/hTEvaUJH2PrDP3uAdF/giphy.gif?cid=790b7611a93e1203bf9510a494d840302b849a2e179138b9&rid=giphy.gif&ct=g'} alt="demo" width="40%"/>
+<img src='https://media0.giphy.com/media/hTEvaUJH2PrDP3uAdF/giphy.gif?cid=790b7611a93e1203bf9510a494d840302b849a2e179138b9&rid=giphy.gif&ct=g' alt="demo" width="40%"/>
 
 fetch data
 <img src={{uri:'https://media3.giphy.com/media/ryqCFekByQlmBIiJcZ/giphy.gif?cid=790b7611564c470296638cdaea805ecbdfe9291df2a1db88&rid=giphy.gif&ct=g'}} alt="demo" width="40%"/>
