@@ -21,7 +21,7 @@ react-native run-android
 #### fetch data
 
 <img src='https://media3.giphy.com/media/ryqCFekByQlmBIiJcZ/giphy.gif?cid=790b7611564c470296638cdaea805ecbdfe9291df2a1db88&rid=giphy.gif&ct=g' alt="demo" width="40%"/>
-<p/>
+</p>
 
 #### movie details
 
