@@ -1,6 +1,9 @@
-import {call, put, takeLatest, select} from 'redux-saga/effects';
-import {RootState} from '../../app/store';
-import {getMovieApi, getSimilarApi, getVideoApi} from '../../helpers/constant';
+import {call, put} from 'redux-saga/effects';
+import {
+  getMovieApi,
+  getSimilarApi,
+  getVideoApi,
+} from '../../../helpers/constant';
 
 import {
   getMovieSuccess,

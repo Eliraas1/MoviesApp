@@ -1,11 +1,10 @@
-import {call, put, takeLatest, select} from 'redux-saga/effects';
+import {call, put, select} from 'redux-saga/effects';
 import {RootState} from '../../app/store';
-import {API_URL} from '../../helpers/constant';
+import {API_URL} from '../../../helpers/constant';
 import {getMovieSuccess} from '../../features/movieSlice';
 import {requestGetData} from '../requests/movies';
 
 export function* handleGetMovies() {
-  //   const moviePage = select(state => state.movie.page);
   const {moviePage} = yield select((state: RootState) => ({
     moviePage: state.movies.page,
   }));
