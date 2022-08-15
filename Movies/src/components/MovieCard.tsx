@@ -3,12 +3,12 @@ import React from 'react';
 import Icon from 'react-native-vector-icons/dist/MaterialCommunityIcons';
 import {useNavigation} from '@react-navigation/native';
 import {useDispatch, useSelector} from 'react-redux';
-import {addFavorite, removeFavorite} from '../features/favoriteSlice';
-import {RootState} from '../app/store';
+import {addFavorite, removeFavorite} from '../redux/features/favoriteSlice';
+import {RootState} from '../redux/app/store';
 import {API_IMG} from '../helpers/constant';
 import {ADULT_ICON} from '../helpers/constant';
 import {setHeight, setWidth} from '../helpers/screenSize';
-import {getMovieDetailFetch} from '../features/movieDetailsSlice';
+import {getMovieDetailFetch} from '../redux/features/movieDetailsSlice';
 
 const MovieCard = ({item, height, width}: any) => {
   const {

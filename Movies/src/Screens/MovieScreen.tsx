@@ -9,8 +9,8 @@ import {
 import React from 'react';
 import MovieCard from '../components/MovieCard';
 import {useDispatch, useSelector} from 'react-redux';
-import {RootState} from '../app/store';
-import {getMovieFetch} from '../features/movieSlice';
+import {RootState} from '../redux/app/store';
+import {getMovieFetch} from '../redux/features/movieSlice';
 import {setHeight, setWidth} from '../helpers/screenSize';
 import Background from '../components/Background';
 const MovieScreen = () => {

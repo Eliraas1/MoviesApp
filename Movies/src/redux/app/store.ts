@@ -29,7 +29,7 @@ const userConfig = {
   storage: AsyncStorage,
 };
 const movieDetailsConfig = {
-  key: 'movieDetailsSlice',
+  key: 'movieDetailsReducer',
   version: 1,
   storage: AsyncStorage,
 };

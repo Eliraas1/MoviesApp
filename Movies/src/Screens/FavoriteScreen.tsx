@@ -2,8 +2,7 @@ import {StyleSheet, Text, View, FlatList} from 'react-native';
 import React from 'react';
 import MovieCard from '../components/MovieCard';
 import {useSelector} from 'react-redux';
-import {RootState} from '../app/store';
-import {setHeight} from '../helpers/screenSize';
+import {RootState} from '../redux/app/store';
 import Background from '../components/Background';
 const FavoriteScreen = () => {
   const keyExtractor = React.useCallback(item => item.id, []);

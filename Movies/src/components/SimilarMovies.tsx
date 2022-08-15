@@ -2,7 +2,7 @@ import {StyleSheet, Text, View, FlatList} from 'react-native';
 import React from 'react';
 import MovieCard from '../components/MovieCard';
 import {useSelector} from 'react-redux';
-import {RootState} from '../app/store';
+import {RootState} from '../redux/app/store';
 
 const SimilarMovies = () => {
   const keyExtractor = React.useCallback(item => item.id, []);

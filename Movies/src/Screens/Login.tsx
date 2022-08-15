@@ -6,7 +6,7 @@ import {setHeight} from '../helpers/screenSize';
 import {googleSignIn, googleSignOut} from '../services/googleServices';
 import {facebookSignIn} from '../services/facebookServices';
 import {useDispatch} from 'react-redux';
-import {setUser} from '../features/userSlice';
+import {setUser} from '../redux/features/userSlice';
 
 export default function Login() {
   const [isLoading, setIsLoading] = React.useState(false);

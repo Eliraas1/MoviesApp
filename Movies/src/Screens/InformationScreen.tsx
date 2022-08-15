@@ -15,7 +15,7 @@ import {setHeight, setWidth} from '../helpers/screenSize';
 import Background from '../components/Background';
 import {useSelector} from 'react-redux';
 import {YOUTUBE_BASE_URL} from '../helpers/constant';
-import {RootState} from '../app/store';
+import {RootState} from '../redux/app/store';
 import SimilarMovies from '../components/SimilarMovies';
 
 const InformationScreen = () => {
