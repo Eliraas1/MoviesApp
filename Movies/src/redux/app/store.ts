@@ -18,7 +18,6 @@ import createSagaMiddleware from 'redux-saga';
 import {watcherSaga} from '../sagas/rootSaga';
 
 const sagaMiddleware = createSagaMiddleware();
-
 const favoriteConfig = {
   key: 'favoriteReducer',
   version: 1,
@@ -28,7 +27,6 @@ const userConfig = {
   key: 'userReducer',
   version: 1,
   storage: AsyncStorage,
-  whitelist: [],
 };
 const movieDetailsConfig = {
   key: 'movieDetailsSlice',
