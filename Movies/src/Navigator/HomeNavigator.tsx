@@ -3,18 +3,14 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import Icon from 'react-native-vector-icons/dist/MaterialCommunityIcons';
 import MovieScreen from '../Screens/MovieScreen';
 import FavoriteScreen from '../Screens/FavoriteScreen';
-import InformationScreen from '../Screens/InformationScreen';
 import {useSelector} from 'react-redux';
-import {RootState} from '../app/store';
+import {RootState} from '../redux/app/store';
 
 const Tab = createBottomTabNavigator();
 const HomeNavigator = () => {
   const favoritesMovie = useSelector(
     (state: RootState) => state.favorite.value,
   );
-  const detailsMovie = useSelector((state: RootState) => state.movieDetail);
-  const hasMovieDetail = Object.keys(detailsMovie.item).length > 0;
-    
   return (
     <Tab.Navigator
       screenOptions={{
@@ -45,17 +41,6 @@ const HomeNavigator = () => {
           tabBarIcon: ({color}) =>
             favoritesMovie.length > 0 && (
               <Icon name="heart" color={color} size={28} />
-            ),
-        }}
-      />
-      <Tab.Screen
-        name="information"
-        component={InformationScreen}
-        options={{
-          tabBarLabel: '',
-          tabBarIcon: ({color}) =>
-            hasMovieDetail && (
-              <Icon name="information" color={color} size={28} />
             ),
         }}
       />

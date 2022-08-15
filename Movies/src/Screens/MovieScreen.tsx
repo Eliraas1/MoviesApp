@@ -25,7 +25,6 @@ const MovieScreen = () => {
   const renderCard = ({item}) => {
     return <MovieCard item={item} />;
   };
-
   return (
     <Background>
       <View style={styles.container}>

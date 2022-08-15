@@ -14,13 +14,12 @@ import {
   StatusBar,
   StyleSheet,
   useColorScheme,
-  ScrollView,
 } from 'react-native';
 import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack';
 import Navigator from './src/Navigator/Navigator';
 import {Provider} from 'react-redux';
-import {store} from './src/app/store';
+import {store} from './src/redux/app/store';
 import {PersistGate} from 'redux-persist/integration/react';
 import {persistStore} from 'redux-persist';
 

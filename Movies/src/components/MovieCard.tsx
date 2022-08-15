@@ -1,7 +1,6 @@
 import {View, Text, StyleSheet, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 import Icon from 'react-native-vector-icons/dist/MaterialCommunityIcons';
-import {useNavigation} from '@react-navigation/native';
 import {useDispatch, useSelector} from 'react-redux';
 import {addFavorite, removeFavorite} from '../redux/features/favoriteSlice';
 import {RootState} from '../redux/app/store';
@@ -9,8 +8,10 @@ import {API_IMG} from '../helpers/constant';
 import {ADULT_ICON} from '../helpers/constant';
 import {setHeight, setWidth} from '../helpers/screenSize';
 import {getMovieDetailFetch} from '../redux/features/movieDetailsSlice';
+import MovieModal from './MovieModal';
 
-const MovieCard = ({item, height, width}: any) => {
+const MovieCard = ({item, height, width, padding}: any) => {
+  const [modalVisible, setModalVisible] = React.useState(false);
   const {
     title,
     release_date = '2022-07-06',
@@ -19,7 +20,6 @@ const MovieCard = ({item, height, width}: any) => {
     adult,
     vote_average,
     id,
-    backdrop_path,
   } = item;
   const favoritesMovie = useSelector(
     (state: RootState) => state.favorite.idList,
@@ -27,7 +27,6 @@ const MovieCard = ({item, height, width}: any) => {
   let isInFavorite = favoritesMovie[`${id}`] ? true : false;
   const [isLoved, setIsLoved] = React.useState(isInFavorite);
 
-  const navigation = useNavigation();
   const dispatch = useDispatch();
 
   const year = release_date ? release_date.split('-')[0] : '';
@@ -41,7 +40,7 @@ const MovieCard = ({item, height, width}: any) => {
 
   const handleMovieClick = () => {
     dispatch(getMovieDetailFetch(id));
-    navigation.navigate('information');
+    setModalVisible(true);
   };
 
   return (
@@ -88,16 +87,18 @@ const MovieCard = ({item, height, width}: any) => {
           <Text style={styles.titles}>{year}</Text>
         </View>
       </View>
+      <MovieModal visible={modalVisible} setModalVisible={setModalVisible} />
     </TouchableOpacity>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'black',
+    // backgroundColor: 'black',
     flex: 1,
     borderRadius: 12,
     marginVertical: 15,
+    padding: 3,
   },
   details: {
     backgroundColor: 'rgba(94, 94, 91,1)',
